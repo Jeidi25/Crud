@@ -1,0 +1,163 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.inicio{
+    padding: 30px;
+}
+
+.button{
+    margin-left: 90%;
+    width: 50px;
+    height: 20px;
+    font-size: 15px;
+}
+
+.fa-plus{
+    border-radius: 6%;
+    border-color: rgb(130, 145, 241);
+    background-color: rgb(130, 145, 241) ;
+    color:white;
+    padding: 10px;
+}
+
+
+
+.Eliminar{
+    padding: 30px;
+    height: 80%;
+    width: 50px;
+    color:rgb(110, 110, 239)
+}
+
+.Usuarios{
+    color: black;
+}
+
+.tabla{
+    width: 95%;
+    padding: 30px;
+}
+
+.item table{
+    width: 100%;
+}
+
+.tabla tr th{
+    border: 1px solid #ccc;
+    padding: 30px 0px 0px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.tabla tr td {
+    border: 1px solid #ccc;
+    padding: 30px 0px 0px;
+    text-align: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+
+.fa-trash{
+    color:rgb(131, 128, 128);
+    padding: 5px;
+    width: 25px;
+
+}
+
+.final{
+    width: 15%;
+    margin-left: 80%;
+    border:1px solid#ccc;
+    color:blue;
+}
+
+.final tr th{
+    border-right: 1px solid #ccc;
+    padding: 15px 0px ;
+}
+
+.modal{
+    width: 70%;
+    height: 500px;
+    background-color: rgb(242, 242, 243);
+    position: fixed;
+    top:100px;
+    left:100px;
+}
+
+.Ingresar{
+    padding: 10px;
+    margin:6px;
+}
+
+
+.Img{
+    padding:30px;
+}
+
+.Seleccionar{
+    background-color: rgb(113, 113, 239);
+    width: 20%;
+    height: 50px;
+    border-color: rgb(113, 113, 239);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:medium;
+    padding: -50px;
+}
+
+.Datos{
+    display: flex;
+    padding-left: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.Nombre{
+    padding: 20px;
+    margin-right: 1px;
+}
+
+.Apellido{
+    padding: 20px;
+    margin-right: 1px;
+}
+.E-mail{
+    padding: 20px;
+    margin-right: 1px;
+
+}
+
+.Tipo{
+    padding: 20px;
+    margin-right: 1px;
+}
+
+.Salir{
+    padding: 10px;
+    color: white;
+    background-color: red;
+    border-color: red;
+    margin-left: 90%;
+    margin-top: 30px;
+}
+
+.Guardar{
+    padding: 10px;
+    color: white;
+    background-color: rgb(5, 173, 53);
+    border-color: rgb(5, 173, 53);
+    margin-left: 80%;
+    position: relative; 
+}
+
+.modal .activo{
+    
+}
+
