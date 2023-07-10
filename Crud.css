@@ -126,33 +126,43 @@ align-items: center;
     position: fixed;
     top:100px;
     left:100px;
+    justify-content: center;
 }
 
 .Ingresar{
     padding: 10px;
     margin:6px;
+  
 }
 
 
 .Img{
-    padding:30px;
+    padding:20px;
+    margin: 15px;
 }
 
 .Seleccionar{
-    background-color: rgb(113, 113, 239);
+    background-color: rgb(144, 144, 215);
     width: 20%;
     height: 50px;
-    border-color: rgb(113, 113, 239);
+    border-color: rgb(153, 153, 242);
     font-family: Arial, Helvetica, sans-serif;
     font-size:medium;
     padding: -50px;
+    
 }
 
 .Datos{
+    display:flex;
+    margin:20px;
+    gap:8px;
+    justify-content: center;
+}
+
+.datos{
     display: flex;
-    padding-left: 30px;
-    margin-left: -15px;
-    margin-right: -15px;
+    gap: 17px;
+    justify-content: center;
 }
 
 .Nombre{
@@ -176,22 +186,24 @@ align-items: center;
 }
 
 .Salir{
-    padding: 10px;
-    color: white;
     background-color: red;
     border-color: red;
-    margin-left: 90%;
-    margin-top: 30px;
-    
+    width: 50px;
+    height: 50px;
 }
 
 .Guardar{
-    padding: 10px;
-    color: white;
     background-color: rgb(5, 173, 53);
     border-color: rgb(5, 173, 53);
     margin-left: 80%;
-    position: relative; 
+    width: 80px;
+    height: 50px;
 }
 
+.botonesFinal{
+    display: flex;
+    position: relative; 
+    color: white;
+    gap:6px;
+}
 
