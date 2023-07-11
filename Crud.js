@@ -1,13 +1,11 @@
-var Btn = document.querySelector("salir");
-var modal = document.querySelector("modal");
-var SalirBtn= document.querySelector(".salir");
-SalirBtn.onclick = function()
-{
-    
-}
+const modal = document.querySelector(".modal")
+const buttonSalir = modal.querySelector(".Salir")
+buttonSalir.addEventListener("click", ()=>{
+    modal.classList.add("oculto")
+})
 
-var Nombre = document.getElementById("Nombre");
-var Apellido = document.getElementById("Apellido");
-var Email = document.getElementById("E-mail");
-var Tipo = document.getElementById("Tipo");
+const botonAgregar = document.querySelector (".botonAgregar")
+botonAgregar.addEventListener("click", ()=>{
+    modal.classList.remove("oculto")
+})
 

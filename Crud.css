@@ -8,16 +8,16 @@
     padding: 30px;
 }
 
-.button{
+/*.button{
     margin-left: 90%;
     width: 50px;
     height: 20px;
     font-size: 15px;
-}
+}*/
 
 
 
-.Button{
+.botonAgregar{
     display: flex;
     margin-left: 90%;
     font-family: 'Roboto', sans-serif;
@@ -127,6 +127,10 @@ align-items: center;
     top:100px;
     left:100px;
     justify-content: center;
+}
+
+.modal.oculto{
+    display: none;
 }
 
 .Ingresar{
