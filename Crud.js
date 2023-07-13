@@ -15,14 +15,17 @@ function Datos (Nombre, Apellido, Email, Tipo){
     this.Apellido = Apellido
     this.Email = Email
     this.Tipo = Tipo
+
+    const datos = [];
+
+    function obtenerNombre ()
+
+    const Datos = document.querySelector (".Nombre")
+    obtenerNombre = parseInt (obtenerNombre);
+
+    return obtenerNombre;
 }
 
-const datos = [];
 
-function obtenerNombre ()
 
-const Datos = document.querySelector (".Nombre")
-obtenerNombre = parseInt (obtenerNombre);
-
-return obtenerNombre
 
