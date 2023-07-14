@@ -9,6 +9,10 @@ botonAgregar.addEventListener("click", ()=>{
     modal.classList.remove("oculto")
 })
 
+const Guardar = document.querySelector(".Guardar")
+Guardar.addEventListener("click",()=>{
+    modal.classList.add("oculto")
+})
 function Datos (Nombre, Apellido, Email, Tipo){
 
     this.Nombre = Nombre
@@ -16,9 +20,11 @@ function Datos (Nombre, Apellido, Email, Tipo){
     this.Email = Email
     this.Tipo = Tipo
 
-    const datos = [];
+    const Date = [];
 
-    function obtenerNombre ()
+    function obtenerNombre (){
+
+    }
 
     const Datos = document.querySelector (".Nombre")
     obtenerNombre = parseInt (obtenerNombre);
