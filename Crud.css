@@ -127,6 +127,8 @@ align-items: center;
     top:100px;
     left:100px;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal.oculto{
@@ -141,8 +143,9 @@ align-items: center;
 
 
 .Img{
-    padding:20px;
-    margin: 15px;
+    padding:10px;
+    margin: 0px auto;
+
 }
 
 .Seleccionar{
@@ -152,20 +155,21 @@ align-items: center;
     border-color: rgb(153, 153, 242);
     font-family: Arial, Helvetica, sans-serif;
     font-size:medium;
-    padding: -50px;
-    
+    padding: -50px;   
+    justify-content: center;
+    margin: 0px auto;
 }
 
 .Datos{
     display:flex;
-    margin:20px;
-    gap:8px;
+    margin:25px;
+    gap:15px;
     justify-content: center;
 }
 
 .datos{
     display: flex;
-    gap: 17px;
+    gap: 25px;
     justify-content: center;
 }
 
