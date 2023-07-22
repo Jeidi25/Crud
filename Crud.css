@@ -145,12 +145,24 @@ align-items: center;
 .Img{
     padding:10px;
     margin: 0px auto;
-
+   
 }
 
-.Seleccionar{
+/*.Seleccionar{
     background-color: rgb(144, 144, 215);
     width: 20%;
+    height: 50px;
+    border-color: rgb(153, 153, 242);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:medium;
+    padding: -50px;   
+    justify-content: center;
+    margin: 0px auto;
+}*/
+
+.Documentos{
+    background-color: rgb(144, 144, 215);
+    width: 50%;
     height: 50px;
     border-color: rgb(153, 153, 242);
     font-family: Arial, Helvetica, sans-serif;

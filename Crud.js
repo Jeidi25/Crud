@@ -60,8 +60,17 @@ function actualizarTabla() {
 
     tablaBody.innerHTML = tableBodyContenido
 
+const fileinput = document.querySelector(".fileinput");
+const Img = document.querySelector(".Img");
 
+const loadImage = ()=>{
+    let file = fileinput.files[0];
+    if(!file)return;
+    console.log("file");
+}
 
+fileinput.addEventListener("change", loadImage);
+Img.addEventListener("click",()=> fileinput());
 }
 
 
