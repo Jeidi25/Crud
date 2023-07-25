@@ -1,6 +1,9 @@
 const modal = document.querySelector(".modal")
 const lista = []
 const buttonSalir = modal.querySelector(".Salir")
+const imagenPerfil = document.querySelector('#imagen-perfil')
+
+
 buttonSalir.addEventListener("click", ()=>{
     modal.classList.add("oculto")
 })
@@ -21,6 +24,7 @@ function guadarDatos(){
     const Apellido = document.querySelector("#inputApellido").value
     const Email = document.querySelector("#inputEmail").value
     const Tipo = document.querySelector("#inputTipo").value
+    const ImagenSrc = imagenPerfil.src
 
     if(Nombre.trim() == "" ) alert("El nombre no puede estar vacio")
     if(Nombre.trim() == "" ) alert("El nombre no puede estar vacio")
@@ -35,7 +39,7 @@ function guadarDatos(){
         Apellido: Apellido,
         Email : Email,
         Tipo : Tipo,
-     
+        Img: ImagenSrc,
     })
     console.log(lista)
     actualizarTabla()
@@ -47,6 +51,7 @@ function actualizarTabla() {
     for(let i = 0; i<lista.length; i++){
         tableBodyContenido += ` 
         <tr>
+            <td><img class="imagen-columna" src="${lista[i].Img}"/></td>
             <td>${lista[i].Nombre}</td>
             <td>${lista [i].Apellido}</td>
             <td>${lista[i].Email}</td>
@@ -60,17 +65,30 @@ function actualizarTabla() {
 
     tablaBody.innerHTML = tableBodyContenido
 
-const fileinput = document.querySelector(".fileinput");
+
+}
+
+const fileinput = document.querySelector("#file-input");
 const Img = document.querySelector(".Img");
 
 const loadImage = ()=>{
     let file = fileinput.files[0];
-    if(!file)return;
-    console.log("file");
+    console.log(file);
+
+    if (file) {
+      const src = URL.createObjectURL(file);
+      imagenPerfil.src = src;
+
+    } else {
+      imagenPerfil.src = '';
+    }
 }
+
+
+console.log(fileinput);
 
 fileinput.addEventListener("change", loadImage);
-Img.addEventListener("click",()=> fileinput());
-}
 
-
+imagenPerfil.addEventListener("click", () => {
+    fileinput.click()
+})

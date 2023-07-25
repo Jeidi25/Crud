@@ -145,20 +145,7 @@ align-items: center;
 .Img{
     padding:10px;
     margin: 0px auto;
-   
 }
-
-/*.Seleccionar{
-    background-color: rgb(144, 144, 215);
-    width: 20%;
-    height: 50px;
-    border-color: rgb(153, 153, 242);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:medium;
-    padding: -50px;   
-    justify-content: center;
-    margin: 0px auto;
-}*/
 
 .Documentos{
     background-color: rgb(144, 144, 215);
@@ -227,3 +214,10 @@ align-items: center;
     gap:6px;
 }
 
+#imagen-perfil{
+    cursor: pointer;
+}
+
+.imagen-columna{
+    max-width: 100px;
+}
