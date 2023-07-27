@@ -99,11 +99,4 @@ imagenPerfil.addEventListener("click", () => {
     fileinput.click()
 })
 
-const botonEliminar = () => {
-     const i = document.createElement('fa fas-trash');
-     i.classList.add('fas');
-     i.classList.add('fa-trash-alt');
-     i.classList.add('trashIcon');
-     i.classList.add('icon');
-     return i
-}
+
