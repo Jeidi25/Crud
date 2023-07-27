@@ -92,3 +92,9 @@ fileinput.addEventListener("change", loadImage);
 imagenPerfil.addEventListener("click", () => {
     fileinput.click()
 })
+
+const buttonEliminar = modal.querySelector(".fa fa-trash")
+
+buttonSalir.addEventListener("click", ()=>{
+    modal.classList.add("ocultar")
+})
