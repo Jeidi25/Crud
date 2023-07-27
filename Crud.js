@@ -1,5 +1,5 @@
 const modal = document.querySelector(".modal")
-const lista = []
+let lista = []
 const buttonSalir = modal.querySelector(".Salir")
 const imagenPerfil = document.querySelector('#imagen-perfil')
 
@@ -41,7 +41,6 @@ function guadarDatos(){
         Tipo : Tipo,
         Img: ImagenSrc,
     })
-    console.log(lista)
     actualizarTabla()
 }
 
@@ -57,16 +56,26 @@ function actualizarTabla() {
             <td>${lista[i].Email}</td>
             <td>${lista[i].Tipo}</td>
             <td>    
-                <button class="fa fa-trash"></button>
+                <button class="fa fa-trash boton-eliminar-item"></button>
             </td>
         </tr>
         `
     }
 
     tablaBody.innerHTML = tableBodyContenido
-
-
+    agregarEventosAItems()
 }
+
+function agregarEventosAItems(){
+    const botonesEliminar = document.querySelectorAll('.boton-eliminar-item')
+    botonesEliminar.forEach((boton, indexBoton) => {
+        boton.addEventListener('click', () =>{
+          lista = lista.filter((x, indexLista) => indexLista !== indexBoton)
+          actualizarTabla()
+        })
+    })
+}
+
 
 const fileinput = document.querySelector("#file-input");
 const Img = document.querySelector(".Img");
@@ -84,17 +93,17 @@ const loadImage = ()=>{
     }
 }
 
-
-console.log(fileinput);
-
 fileinput.addEventListener("change", loadImage);
 
 imagenPerfil.addEventListener("click", () => {
     fileinput.click()
 })
 
-const buttonEliminar = modal.querySelector(".fa fa-trash")
-
-buttonSalir.addEventListener("click", ()=>{
-    modal.classList.add("ocultar")
-})
+const botonEliminar = () => {
+     const i = document.createElement('fa fas-trash');
+     i.classList.add('fas');
+     i.classList.add('fa-trash-alt');
+     i.classList.add('trashIcon');
+     i.classList.add('icon');
+     return i
+}
