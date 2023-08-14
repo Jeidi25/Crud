@@ -19,6 +19,7 @@ Guardar.addEventListener("click",()=>{
     modal.classList.add("oculto")
 })
 
+
 function guadarDatos(){
     const Nombre = document.querySelector("#inputNombre").value
     const Apellido = document.querySelector("#inputApellido").value
@@ -26,11 +27,9 @@ function guadarDatos(){
     const Tipo = document.querySelector("#inputTipo").value
     const ImagenSrc = imagenPerfil.src
 
-    if(Nombre.trim() == "" ) alert("El nombre no puede estar vacio")
-    if(Nombre.trim() == "" ) alert("El nombre no puede estar vacio")
-    if(Nombre.trim() == "" ) alert("El nombre no puede estar vacio")
-    if(Nombre.trim() == "" ) alert("El nombre no puede estar vacio")
 
+    if(Nombre.trim() == "" ) alert("El nombre no puede estar vacio")
+   
     const camposValidos = [Nombre, Apellido, Email, Tipo].every(x => x.trim() !== "")
     if(!camposValidos) alert("Los campos no son validos")
 
@@ -40,6 +39,8 @@ function guadarDatos(){
         Email : Email,
         Tipo : Tipo,
         Img: ImagenSrc,
+     
+        
     })
     actualizarTabla()
 }
@@ -55,7 +56,8 @@ function actualizarTabla() {
             <td>${lista [i].Apellido}</td>
             <td>${lista[i].Email}</td>
             <td>${lista[i].Tipo}</td>
-            <td>    
+            
+            <td>
                 <button class="fa fa-trash boton-eliminar-item"></button>
             </td>
         </tr>
