@@ -1,136 +1,72 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: 'Roboto', sans-serif;
+    font-family:'Noto Sans Tangsa', sans-serif;
 }
 
 header{
-    justify-content: center;
-    height: 60px;
+    height: auto;
     padding: 40px;
 }
 
-
-
 .botonAgregar{
-    display: flex;
-    margin-left: 90%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    padding: 5px; 
+    width: 90px;
+    margin-left:1000px;
     color:white;
     background-color: blue;
     border-color:blue;
-    padding: 6px;
-    gap:3px;
     border-radius: 3px;
 }
 
-.contenedor{
-    display: flex;
-    gap:7px;
-    margin:20px;
+main{
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px auto;
 }
 
-.Usuarios{
-    color: black;
-    display: block;
-
+.Table{
+   gap:20px;
+   display: flex;
 }
 
-.end{
-display: flex;
-justify-content: space-between;
-align-items: center;
+.Contenedor{
+  display: flex;
+  text-align: center;
 }
 
-.tabla{
-    width: 95%;
-    padding: 30px;
+footer{
+    padding: 10px;
 }
 
-.item table{
-    width: 100%;
+.Buttons{
+    margin-left: 85%;
 }
 
-.tabla tr th{
-    border: 1px solid #ccc;
-    padding: 30px 0px 0px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-
-.tabla tr td {
-    border: 1px solid #ccc;
-    padding: 30px 0px 0px;
-    text-align: center;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-
-
-
-.fa-trash{
-    color:rgb(131, 128, 128);
-    padding: 5px;
-    width: 25px;
-
-}
-
-.final{
-    width: 15%;
-    color:blue;
-    display: flex;
-}
-
-.final>button{
-    border-color: #e4e2e2;
-    padding: 6px;
-    
-}
-
-.uno{
-    background-color: blue;
-    color:white;
-}
-
-.dos{
-  color:blue;
-}
-
-.Siguiente{
-    color:blue;
-}
-
-.Anterior{
-    color:#6f6c6c
-}
-.modal{
-    width: 70%;
-    height: 500px;
-    background-color: rgb(255, 255, 255);
-    position: fixed;
-    top:100px;
-    left:100px;
+.formulario{
+    font-family:'Noto Sans Tangsa', sans-serif;
+    width: 35%;
+    height: auto;
+    gap:1px;
+    background-color: #f3efef;
+    position: absolute;
+    top:10px;
+    left:490px;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.modal.oculto{
     display: none;
+    flex-direction: column;
 }
 
 .Ingresar{
     padding: 10px;
     margin:6px;
-  
 }
 
 .Img{
     padding:10px;
     margin: 0px auto;
+    width: 80px;
+    height: 80px;
 }
 
 .Documentos{
@@ -158,53 +94,38 @@ align-items: center;
     justify-content: center;
 }
 
-.Nombre{
-    padding: 20px;
-    margin-right: 1px;
+.Guardar{
+    background-color: rgb(66, 75, 211);
+    border-color:rgb(66, 75, 211);
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    color: white;
+    margin-left:45%;
+    justify-content: center;
 }
 
-.Apellido{
-    padding: 20px;
-    margin-right: 1px;
-}
-.E-mail{
-    padding: 20px;
-    margin-right: 1px;
-
-}
-
-.Tipo{
-    padding: 20px;
-    margin-right: 1px;
+.boton{
+    padding: 1.5px;
+    margin-left: auto;
+    justify-content: center;
 }
 
 .Salir{
+    margin-left: auto;
     background-color: red;
     border-color: red;
-    width: 70px;
-    height: 40px;
-}
-
-.Guardar{
-    background-color: rgb(5, 173, 53);
-    border-color: rgb(5, 173, 53);
-    margin-left: 80%;
-    width: 85px;
-    height: 40px;
-}
-
-.botonesFinal{
-    padding: 10px;
-    display: flex;
-    position: relative; 
+    width: 50px;
+    height: 30px;
     color: white;
-    gap:6px;
 }
 
-#imagen-perfil{
+#Img-perfil{
     cursor: pointer;
 }
 
-.imagen-columna{
+.Img-columna{
     max-width: 100px;
 }
+
+

@@ -1,104 +1,46 @@
-const modal = document.querySelector(".modal")
-let lista = []
-const buttonSalir = modal.querySelector(".Salir")
-const imagenPerfil = document.querySelector('#imagen-perfil')
+const botonAgregar = document.querySelector('.botonAgregar');
+const formulario = document.querySelector('.formulario');
+
+botonAgregar.addEventListener('click', function () {
+    formulario.style.display = 'flex';
+});
 
 
-buttonSalir.addEventListener("click", ()=>{
-    modal.classList.add("oculto")
-})
+const botonSalir = document.querySelector('.Salir');
+botonSalir.addEventListener('click', function () {
+formulario.style.display = 'none';
+});
 
-const botonAgregar = document.querySelector (".botonAgregar")
-botonAgregar.addEventListener("click", ()=>{
-    modal.classList.remove("oculto")
-})
+const botonGuardar = document.querySelector('.Guardar');
+botonGuardar.addEventListener('click', function () {
 
-const Guardar = document.querySelector(".Guardar")
-Guardar.addEventListener("click",()=>{
-    guadarDatos()
-    modal.classList.add("oculto")
-})
+const nombreInput = document.getElementById('Nombre').value;
+const apellidoInput = document.getElementById('Apellido').value;
+const emailInput = document.getElementById('E-mail').value;
+const tipoSelect = document.getElementById('Tipo').value;
 
+const formulario = document.querySelector(".formulario");
 
-function guadarDatos(){
-    const Nombre = document.querySelector("#inputNombre").value
-    const Apellido = document.querySelector("#inputApellido").value
-    const Email = document.querySelector("#inputEmail").value
-    const Tipo = document.querySelector("#inputTipo").value
-    const ImagenSrc = imagenPerfil.src
+const nuevaClass = document.createElement('field');
 
+const divActivo = document.createElement('field');
+divActivo.innerText = 'x'
+const divNombre = document.createElement('field');
+divNombre.innerText = nombreInput;
+const divApellido = document.createElement('field');
+divApellido.innerText = apellidoInput;
+const divEmail = document.createElement('field');
+divEmail.innerText = emailInput;
+const divTipo = document.createElement('field');
+divTipo.innerText = tipoSelect;
 
-    if(Nombre.trim() == "" ) alert("El nombre no puede estar vacio")
-   
-    const camposValidos = [Nombre, Apellido, Email, Tipo].every(x => x.trim() !== "")
-    if(!camposValidos) alert("Los campos no son validos")
+nuevaClass.appendChild(divActivo);
+nuevaClass.appendChild(divNombre);
+nuevaClass.appendChild(divApellido);
+nuevaClass.appendChild(divEmail);
+nuevaClass.appendChild(divTipo);
 
-    lista.push({
-        Nombre: Nombre, 
-        Apellido: Apellido,
-        Email : Email,
-        Tipo : Tipo,
-        Img: ImagenSrc,
-     
-        
-    })
-    actualizarTabla()
-}
+formulario.appendChild(nuevaClass);
 
-function actualizarTabla() {
-    const tablaBody = document.querySelector(".tabla tbody")
-    let tableBodyContenido = ""
-    for(let i = 0; i<lista.length; i++){
-        tableBodyContenido += ` 
-        <tr>
-            <td><img class="imagen-columna" src="${lista[i].Img}"/></td>
-            <td>${lista[i].Nombre}</td>
-            <td>${lista [i].Apellido}</td>
-            <td>${lista[i].Email}</td>
-            <td>${lista[i].Tipo}</td>
-            
-            <td>
-                <button class="fa fa-trash boton-eliminar-item"></button>
-            </td>
-        </tr>
-        `
-    }
-
-    tablaBody.innerHTML = tableBodyContenido
-    agregarEventosAItems()
-}
-
-function agregarEventosAItems(){
-    const botonesEliminar = document.querySelectorAll('.boton-eliminar-item')
-    botonesEliminar.forEach((boton, indexBoton) => {
-        boton.addEventListener('click', () =>{
-          lista = lista.filter((x, indexLista) => indexLista !== indexBoton)
-          actualizarTabla()
-        })
-    })
-}
-
-
-const fileinput = document.querySelector("#file-input");
-const Img = document.querySelector(".Img");
-
-const loadImage = ()=>{
-    let file = fileinput.files[0];
-    console.log(file);
-
-    if (file) {
-      const src = URL.createObjectURL(file);
-      imagenPerfil.src = src;
-
-    } else {
-      imagenPerfil.src = '';
-    }
-}
-
-fileinput.addEventListener("change", loadImage);
-
-imagenPerfil.addEventListener("click", () => {
-    fileinput.click()
-})
-
-
+formulario.style.display = 'none';
+});
