@@ -22,12 +22,17 @@ header{
 main{
     border: 1px solid #ddd;
     padding: 20px;
-    margin: 20px auto;
 }
 
 .Table{
-   gap:20px;
    display: flex;
+   gap:10%;
+   margin: 20px;
+}
+
+.Trash{
+width:24;
+height:24; 
 }
 
 .Contenedor{
@@ -36,11 +41,12 @@ main{
 }
 
 footer{
-    padding: 10px;
+   height: auto;
+   padding: 40px;
 }
 
 .Buttons{
-    margin-left: 85%;
+    margin-left: 80%;
 }
 
 .formulario{
@@ -49,9 +55,9 @@ footer{
     height: auto;
     gap:1px;
     background-color: #f3efef;
-    position: absolute;
     top:10px;
     left:490px;
+    position: absolute;
     justify-content: center;
     display: none;
     flex-direction: column;
